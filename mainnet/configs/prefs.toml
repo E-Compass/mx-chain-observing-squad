@@ -47,3 +47,16 @@
    #    { File = "config.toml", Path = "MiniBlocksStorage.Cache.Name", Value = "MiniBlocksStorage" },
    #    { File = "external.toml", Path = "ElasticSearchConnector.Enabled", Value = "true" }
    #]
+   OverridableConfigTomlValues = [
+        { File = "external.toml", Path = "ElasticSearchConnector.Enabled", Value = "true" },
+        { File = "external.toml", Path = "ElasticSearchConnector.IndexerCacheSize", Value = "0" },
+        { File = "external.toml", Path = "ElasticSearchConnector.BulkRequestMaxSizeInBytes", Value = "4194304" },
+        { File = "external.toml", Path = "ElasticSearchConnector.URL", Value = "http://localhost:9200" },
+        { File = "external.toml", Path = "ElasticSearchConnector.UseKibana", Value = "true" },
+        { File = "external.toml", Path = "ElasticSearchConnector.Username", Value = "elastic" },
+        { File = "external.toml", Path = "ElasticSearchConnector.Password", Value = "changeme" },
+        { File = "config.toml", Path = "StoragePruning.ObserverCleanOldEpochsData", Value = "true" },
+        { File = "config.toml", Path = "StoragePruning.NumEpochsToKeep", Value = "2" },
+        { File = "config.toml", Path = "StoragePruning.NumActivePersisters", Value = "2" }
+    ]
+
