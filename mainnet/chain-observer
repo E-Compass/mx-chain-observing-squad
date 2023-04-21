@@ -4,5 +4,7 @@ FROM multiversx/chain-mainnet:v1.4.14.0
 WORKDIR /go/mx-chain-go/cmd/node/
 RUN sed -i '/\[DbLookupExtensions\]/!b;n;c\\tEnabled = true' ./config/config.toml
 
+COPY configs/prefs.toml /node-0/config/
+
 EXPOSE 8080
 ENTRYPOINT ["/go/mx-chain-go/cmd/node/node", "--log-save", "--log-level=*:DEBUG,core/dblookupext:WARN", "--log-logger-name", "--rest-api-interface=0.0.0.0:8080"]
